@@ -12,6 +12,17 @@
 
 
 def parse_numbers(text: str) -> list[int]:
+    my_list = []
+    parts = text.split(",")
+    for char in parts:
+        delete_spaces = char.strip()
+        if delete_spaces:
+            number = int(delete_spaces)
+            my_list.append(int(delete_spaces))
+    return my_list
+
+
+
     """
     Потрібно перетворити рядок з числами, розділеними комами,
     у список цілих чисел.
@@ -40,7 +51,7 @@ def parse_numbers(text: str) -> list[int]:
         parse_numbers("1,  , 3") -> [1, 3]
         parse_numbers("") -> []
     """
-    pass
+
 
 
 if __name__ == "__main__":
